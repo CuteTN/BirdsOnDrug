@@ -18,7 +18,7 @@ namespace bird
 
         static Bitmap img;
 
-        public Fruit(PointF)
+        public Fruit(float posX, float posY)
         {
             pos = new PointF(posX, posY);
             veloc = new PointF(0, 0);
@@ -50,7 +50,7 @@ namespace bird
         public bool isDisappeared(float formBottom)
         {
             const float OFFSET = 100;
-            return (pos.X > formBottom + OFFSET);
+            return (pos.Y > formBottom + OFFSET);
         }
 
         public void render(Graphics g)
